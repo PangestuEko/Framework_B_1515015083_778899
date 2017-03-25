@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\mahasiswa;
 
-class mahasiswacontroller extends Controller
+use App\Mahasiswa;
+
+class MahasiswaController extends Controller
 {
     public function awal(){
     	return "Hello dari MahasiswaController";
@@ -16,12 +17,12 @@ class mahasiswacontroller extends Controller
     	return $this->simpan();
     }
     public function simpan(){
-    	$mahasiswa = new mahasiswa();
+    	$mahasiswa = new Mahasiswa();
     	$mahasiswa->nama = "Ika Wahyuningsih";
-    	$mahasiswa->nim = "1515001012";
-    	$mahasiswa->alamat = "St.Franchese, New York";
+    	$mahasiswa->nim = "1515001021";
+    	$mahasiswa->alamat = "JL. Pramuka 5A";
     	$mahasiswa->pengguna_id = 3;
     	$mahasiswa->save();
-    	return "Data mahasiswa dengan nama {$mahasiswa->nama} telah disimpan";
-    }
+    	return "Data Mahasiswa dengan Nama {$mahasiswa->nama} telah disimpan";
+}
 }
