@@ -23,5 +23,13 @@ class DosenController extends Controller
     	$dosen->pengguna_id = 3;
     	$dosen->save();
     	return "Data Dosen dengan Nama {$dosen->nama} telah disimpan";
-}
+    }
+         public function dosen(){
+        $dosen = dosen::find(11); //3
+
+        echo "Nama :".$dosen->nama;
+        echo "<br>";
+        echo "Username :".$dosen->pengguna->username;
+    }
+
 }

@@ -4,9 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mahasiswa extends Model
+class mahasiswa extends Model
 {
-    protected $table = 'Mahasiswa';
-    protected $fillable = ['nama','nim','alamat','pengguna_id'];
+	protected $table = 'mahasiswa';
+	public function Pengguna()
+	{
+		return $this->belongsTo(Pengguna::class);
+	}
+    public function JadwalMataKuliah(){
+    	return $this->hasMany(JadwalMataKuliah::class);
+    }
+    // protected $fillable = ['nama','nim','alamat','pengguna_id'];
 }
 
+//table mahasiswa berelasi dari pengguna dan one to many ke jadwalmatakuliah

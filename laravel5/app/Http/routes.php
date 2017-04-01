@@ -50,3 +50,12 @@ Route::get('dosen_matakuliah/tambah', 'Dosen_matakuliahController@tambah');
 Route::get('jadwal_matakuliah', 'Jadwal_matakuliahController@awal');
 Route::get('jadwal_matakuliah/tambah', 'Jadwal_matakuliahController@tambah');
 
+Route::get('post','postcontroller@index');
+
+//RELASI
+
+Route::get('mahasiswa_pengguna','MahasiswaController@mahasiswa');
+Route::get('dosen_pengguna','dosenController@dosen');
+Route::get('dosen_matakuliah_pengguna','dosen_matakuliahcontroller@dosenmatakuliah');
+
+//Pada routes ini, kita memanggil fungsi mahasiswa, dosen, dan dosen matakuliah, yang sebelumnya sudah kita buatkan model yang telah menggunakan relasi. sehingga saat proses pemanggilan terjadi maka dapat memperlihatkan data-data yang diinginkan

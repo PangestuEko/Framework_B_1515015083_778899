@@ -6,6 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengguna extends Model
 {
-    protected $table = 'Pengguna';
-    protected $fillable = ['username','password'];
+	protected $table = 'pengguna';
+	public function dosen(){
+		return $this->hasOne(Dosen::class);
+	}
+	public function mahasiswa()
+	{
+		return $this->hasOne(Mahasiswa::class);
+	}
+	// public function peran(){
+	// 	return $this->belongsToMany(Peran::class);
+	// }
+ 
 }
+
+//Table pengguna berelasi one to one dengan model dosen dan mahasiswa
