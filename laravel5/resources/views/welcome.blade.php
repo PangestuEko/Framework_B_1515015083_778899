@@ -38,8 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">PANGESTU EKO LAKSONO</div>
+                <div class="title">SELAMAT DATANG DI LARAVEL 5.4</div>
             </div>
         </div>
     </body>
-</html>
+</html> 
